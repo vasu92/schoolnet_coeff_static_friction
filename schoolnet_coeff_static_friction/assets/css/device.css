@@ -253,7 +253,9 @@ img.weightImage {
     .col-sm-12 {
         width: auto;
     }
-
+    .col-md-4 {
+        width: 33.33333333%;
+    }
     img.hookImage {
         height: 50px;
     }

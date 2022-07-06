@@ -77,9 +77,7 @@
                     <div id="split-main" class="split">
                         <div class="content_wrapper">
                         <div class="planeImageDiv">
-                            <div style="position:relative;position: relative;
-                            width: 100%;
-                            min-height: 226px;">
+                            <div class="inside_wrapper">
                             <img class="bottom_image" src="assets/images/Bottom_Wood.png">
                             <div class="rotatingDiv">
                             <img class="top_image" src="assets/images/Top_Wood.png">
@@ -89,7 +87,7 @@
                             <img class="scale_image" src="assets/images/scale.png">
                         </div>
                         <div class="row content_div">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="sliderWrapper sliderMassWrapper">
                                     <div class="slider-label">Mass of Body A</div>
                                     <div class="sliderInnerWrapper">
@@ -111,7 +109,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="slider-label">Angle of Plane</div>
                                 <button class="popup_btn bigLeftBtn">
                                     <div class="triangle_left"></div>
@@ -128,7 +126,7 @@
                                   </button>
                                 <!-- <button class="btn btnRight">Angle</button> -->
                                 </div>
-                                <div class="surface_div">
+                                <div class="col-lg-4 col-md-4 col-sm-12 surface_div">
                                     <button class="btn glass_btn">glass</button>
                                     <button class="btn green_btn">green</button>
                                     <button class="btn wood_btn">wood</button>
@@ -161,7 +159,7 @@
                             </div>
                             <div class="popupcontent">
                                 <p>Use the worksheet provided to you, to enter readings of the experiment. <a
-                                        id="link-worksheet" href="assets/docs/oscillations_word.doc">Worksheet</a></p>
+                                        id="link-worksheet" href="assets/docs/coeffsf2_word.doc">Worksheet</a></p>
                             </div>
                         </div>
                     </div>
@@ -188,21 +186,20 @@
                                     <div class="col calculationsCol">
                                         <div class="zoom3">
                                             <h2>Calculations</h2>
-                                            <p>Note: The calculations given below are applicable only for zero damping
-                                            </p>
-                                            <p>Weight of solid, WA =<span class="spancalculate cal_weight">98000</span>dynes</p>
-                                            <p>Angle of Inclination <span class="spancalculate angle_plane">0</span><sup>0</sup></sup></p>
-                                            <p>Normal Force, N=WA *cos <span class="spancalculate norm_force">98000 </span>dynes</p>
-                                            <p>Frictional Force, Ff=S*N <span class="spancalculate fric_force">686.7 </span>dynes</p>
-                                            <p>Sliding Force, SF=WA*sin <span class="spancalculate sliding_force">0 </span>dynes</p>
-                                            
+                                            <!-- <p>Note: The calculations given below are applicable only for zero damping
+                                            </p> -->
+                                            <p>Weight of solid, WA = <span class="spancalculate cal_weight">98000</span>dynes</p>
+                                            <p>Angle of Inclination, &#920; = <span class="spancalculate angle_plane">0</span><sup>0</sup></sup></p>
+                                            <p>Normal Force, N = WA *cos &#920; = <span class="spancalculate norm_force">98000 </span>dynes</p>
+                                            <p>Frictional Force, Ff=&#181;S &#x2715; N = <span class="spancalculate fric_force">686.7 </span>dynes</p>
+                                            <p>Sliding Force, SF=WA &#x2715; sin &#920; = <span class="spancalculate sliding_force">0 </span>dynes</p>
+                                            <p>At Critical Angle of Inclination &#920;c, Frictional force = Sliding force</p>
+                                            <p>For this experiment, consider critical angle approximately equal to the angle at which the block A just starts to slide</p>
+                                            <p>&#181;S &#x2715; WA &#x2715; cos &#920;c = WA &#x2715; sin &#920;c</p>
+                                            <p>Coefficent of static friction, &#181;S = sin &#920;c/cos &#920;c = tan &#920;c</p>
+                                            <p>Compare the calculated values with the actual values</p>
+                                            <p class="bottom_boxes"><span class="glass_box"></span>0.2 <span class="green_box"></span>0.4 <span class="wood_box"></span>0.7</p>
 
-                                            <p>
-                                            <div class="inlblock">Time Period,</div>&nbsp;<div class="inlblock"> T = 2π
-                                                <span>√</span><span class="squarerootbar"> (m / k) </span> =
-                                                <span class="spancalculate txttimeperiod"></span>sec
-                                            </div>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -229,74 +226,21 @@
                                 </div>
                             </div>
                             <div class="popupcontent">
-                                <p>To explore oscillatory motion using spring and bob system.</p>
-                                <p>Spring &amp; Bob</p>
-                                <p>A bob attached to a spring and displaced from its mean position will oscillate top to
-                                    bottom
-                                    in the vertical direction. This type of motion is known as Simple Harmonic Motion.
-                                </p>
-                                <p><span class="bold">Amplitude</span> - The maximum displacement of the bob from the
-                                    mean position (centre)
-                                    towards
-                                    one
-                                    side is known as its Amplitude.</p>
-                                <p><span class="bold">Time Period</span> - The time taken by bob to complete one
-                                    oscillation (from one extreme
-                                    position to
-                                    the other) is known as the Time Period and is usually measured in seconds.</p>
-                                <p>Simple Harmonic Motion</p>
-                                <p>Oscillatory motion is also known as periodic motion because of its repetitive nature
-                                    and
-                                    is
-                                    either in form of circular motion or as wave motion. The simplest type of
-                                    oscillatory
-                                    motion
-                                    is the simple harmonic motion (SHM). A body or an object is said to be in simple
-                                    harmonic
-                                    motion when the force that tries to restore the object to its rest position is
-                                    proportional
-                                    to the displacement of the object. The force, which tries to restore the object to
-                                    its
-                                    original position or equilibrium, is termed as the restoring force.</p>
-                                <p>If the displacement of the body in SHM is plotted over time, we get a Sine curve.</p>
-                                <p>Damped Harmonic Motion</p>
-                                <p>In an ideal SHM, there are no other forces except the weight and the restoring force
-                                    and
-                                    therefore the body can go on oscillating forever. In real life however, air
-                                    resistance
-                                    acts
-                                    against the motion of the oscillating body eventually bringing the system into a
-                                    state
-                                    of
-                                    equilibrium. Air is a natural damper, but there also many other ways of artificially
-                                    damping
-                                    a periodic motion. The damping force acts opposite to the motion of the body and
-                                    therefore
-                                    the amplitude of the oscillations decreases exponentially with time, eventually
-                                    approaching
-                                    zero. If the damping force is very great then no oscillations occur.</p>
-                                <p><span class="bold">Apparatus</span><br>
-                                    Springs of varying spring constants</p>
-                                <p>Bobs of varying masses</p>
-                                <p>Timer</p>
-                                <p>Stand</p>
-                                <p>Scale</p>
-                                <p><span class="bold">Material:</span><br>
-                                    Water</p>
-                                <p><span class="bold">Procedure</span><br>
-                                    Attach the spring to the hook connected to the stand.</p>
-                                <p>Attach a bob of known mass to the spring.</p>
-                                <p>Hold and drag the bob away from its resting position and leave at the desired
-                                    amplitude.
-                                </p>
-                                <p>The bob starts oscillating from top to bottom in a linear direction.</p>
-                                <p>Observe the characteristics of the simple harmonic motion exhibited by the
-                                    oscillating
-                                    spring
-                                    and bob.</p>
-                                <p>Repeat the experiment with different mass and spring of different spring constant
-                                    values.
-                                </p>
+                                <p>To measure the critical angle of inclination for a given surface and to calculate it's coefficient of static friction using inclined plane and block system.</p>
+			<p><span class="bold">Apparatus</span><br>
+				Inclined Plane with adjustable angle<br>
+				<p>Wooden blocks of different masses</p>
+				<p>Different types of sliding surfaces with varying co-efficient of friction</p>
+			</p>
+            <p><span class="bold">Critical Angle of inclination =</span>
+				This is the angle of inclination at which the Frictional force and the Sliding force are equal to each other. When the inclination increases even slightly beyond the critical angle, the body will start sliding down the surface.</p>
+			<p><span class="bold">Procedure</span><br> Select a sliding surface and place it on the adjustable plane, which is kept horizontal at the beginning of the experiment.</p>
+            <p>Place the wooden block on the sliding surface</p>	
+                                <p>Slowly start raising the angle of inclination of the adjustable plane.</p>
+                                <p>Record the angle of inclination at which the block just starts to slide.</p>
+                                <p>Record your observations and calculate the coefficient of static friction for the given surface.</p>
+                                <p>Repeat the procedure for another sliding surface and calculate the coefficients of friction. Verify the results with the given values of friction coefficient.</p>
+                                <p>For a given surface, repeat the experiment by changing the mass of the wooden block and compare with the earlier readings.</p>
                             </div>
                         </div>
                     </div>
@@ -323,104 +267,55 @@
 
                                 <div class="procBox container">
                                     <span class="procstepno">1.</span>
-                                    <p>Set the mass of the bob by using the Mass slider.</p>
-                                    <div class="procSliderWrapper">
-                                        <div class="procInnerSliderWrapper">
-                                            <div class="slider-label">Mass</div>
-                                            <div class="sliderContainer">
-                                                <span class="min">0.1</span>
-                                                <input class="slider" type="range" min="0.1" max="1" step="0.1"
-                                                    value="0.5" style="background-size: 44.4444% 100%;" disabled>
-                                                <span class="max">1</span>
-                                            </div>
-                                            <div class="inputContainer">
-                                                <span class="input_box">0.5</span><span class="unit">kg</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p>Select the sliding surface for the experiment.Click on a surface to select from the different surfaces listed on the screen.
+                                    </p>
                                 </div>
                                 <hr>
                                 <div class="procBox container">
                                     <span class="procstepno">2.</span>
-                                    <p>Set the Damping value and the Spring Constant using the respective sliders.
+                                    <p>Specify the mass of body A using the slider.
                                     </p>
-                                    <div class="procSliderWrapper">
-                                        <div class="procInnerSliderWrapper">
-                                            <div class="slider-label">Spring Constant</div>
-                                            <div class="sliderContainer">
-                                                <span class="min">1</span>
-                                                <input class="slider" type="range" min="1" max="5" step="0.1" value="3"
-                                                    style="background-size: 50% 100%;" disabled>
-                                                <span class="max">5</span>
-                                            </div>
-                                            <div class="inputContainer">
-                                                <span class="input_box">3</span><span class="unit">N/m</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="procSliderWrapper">
-                                        <div class="procInnerSliderWrapper">
-                                            <div class="slider-label">Damping</div>
-                                            <div class="sliderContainer">
-                                                <span class="min">0</span>
-                                                <input class="slider" type="range" min="0" max="0.5" step="0.1"
-                                                    value="0" style="background-size: 0% 100%;" disabled>
-                                                <span class="max">0.5</span>
-                                            </div>
-                                            <div class="inputContainer">
-                                                <span class="input_box">0</span><span class="unit">N/m</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <hr>
                                 <div class="procBox container">
                                     <span class="procstepno">3.</span>
-                                    <p>To start the oscillation, drag the metal bob pressing the mouse button down.
-                                        When
-                                        the
-                                        bob has been dragged through the required distance, release the mouse button
-                                        and
-                                        the
-                                        bob will start oscillating</p>
-                                    <div class="procSliderWrapper">
-                                        <img src="assets/images/weight.svg" style="width: 50px;">
-                                    </div>
+                                    <p>Change the angle of inclination by clicking the arrow buttons. The bigger arrow buttons change the angle by 5 degrees while the smaller buttons change by 1 degree.
+                                    </p>
                                 </div>
                                 <hr>
                                 <div class="procBox container">
                                     <span class="procstepno">4.</span>
-                                    <p>Observe the oscillations of the bob and the corresponding curve plotted on
-                                        the
-                                        graph</p>
-                                    <div class="procSliderWrapper">
-                                        <img src="assets/images/oscillation.png" style="width: 65px;">
-                                        <img src="assets/images/graph.png"
-                                            style="width: 190px;border: 1px solid #999; border-radius: 10px;">
-                                    </div>
+                                    <p>Record the angle at which the block just starts to slide.</p>
                                 </div>
                                 <hr>
                                 <div class="procBox container">
                                     <span class="procstepno">5.</span>
-                                    <p>Click STOP to stop the oscillation. Repeat the experiment with different sets
-                                        of
-                                        values.</p>
-                                    <div class="procbtnWrapper">
-                                        <div class="btn-wrap">
-                                            <button disabled class="btn btn_stop" title="Stop">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
-                                                    viewBox="-5 -5 46 46">
-                                                    <g id="Layer_2" data-name="Layer 2">
-                                                        <g id="Layer_1-2" data-name="Layer 1">
-                                                            <circle class="cls-1" cx="17.5" cy="17.5" r="17" />
-                                                            <rect class="cls-1" x="11.5" y="11.5" width="12" height="12"
-                                                                rx="1" />
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <p>TIP. For the selected surface, first start with bigger arrow button and increase the angle in steps of 5 degrees. Note the angle at which the block starts to slide.This is a coarse reading. Click the REPEAT button and repeat the procedure. As you approach the coarse reading, you can switch to the smaller arrow buttons to increase the angle by 1 degree to precisely get the angle at which the block starts to slide.
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="procBox container">
+                                    <span class="procstepno">6.</span>
+                                    <p>Click on the Calculate button to view the reading and the calculations.
+
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="procBox container">
+                                    <span class="procstepno">7.</span>
+                                    <p>Repeat the procedure for different surface and determine the coefficient of static friction.
+
+
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="procBox container">
+                                    <span class="procstepno">8.</span>
+                                    <p>8)For a given surface, repeat the procedure for different masses of body A and comapre the results with previous readings.
+
+
+
+                                    </p>
                                 </div>
 
                             </div>
@@ -437,10 +332,10 @@
                                                 <div class="row bottom_content ">
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="row">
-                                                            <div class="col-md-6 margin-top-10">
+                                                            <div class="col-md-6 col-sm-6 margin-top-10 padding-right-0">
                                                         <div class="slider-label">Weight of Body A =</div>
                                                         <div class="">
-                                                            <span class="input_box inputMass">100</span><span>*980 = </span>
+                                                            <span class="input_box inputMass">100</span><span>&nbsp;&nbsp;&#x2716;&nbsp;&nbsp;980 <b>&nbsp;=&nbsp;</b> </span>
                                                         </div>
                                                         <div class="slider-label margin-top-10">Frictional Force</div>
                                                         <div class="">
@@ -449,7 +344,7 @@
                                                             
                                                             
                                                         </div>
-                                                        <div class="col-md-6 margin-top-10">
+                                                        <div class="col-md-6 col-sm-6 margin-top-10">
                                                             <div class="slider-label">dynes</div>
                                                             <div class="">
                                                             <span class="cal_weight input_box">98000</span>
@@ -617,35 +512,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="btn-wrap btn-wrap-stop">
-                            <button id="btn_stop" class="btn btn_stop" title="Stop" data-toggle="tooltip">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="-5 -5 46 46">
-                                    <g id="Layer_2" data-name="Layer 2">
-                                        <g id="Layer_1-2" data-name="Layer 1">
-                                            <circle class="cls-1" cx="17.5" cy="17.5" r="17" />
-                                            <rect class="cls-1" x="11.5" y="11.5" width="12" height="12" rx="1" />
-                                        </g>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="btn-wrap btn-wrap-reset">
-                            <button id="btn_reset" class="btn btn_reset" title="Reset" data-toggle="tooltip">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="-5 -5 46 46">
-
-                                    <g id="Layer_2" data-name="Layer 2">
-                                        <g id="Layer_1-2" data-name="Layer 1">
-                                            <g id="New_Symbol_10" data-name="New Symbol 10">
-                                                <circle class="cls-1" cx="17" cy="17" r="17" />
-                                                <path class="cls-1"
-                                                    d="M14.76,10.67,11.48,6.92a.79.79,0,0,0-1.33.27L8.55,11.9a.78.78,0,0,0,.89,1l4.89-1A.78.78,0,0,0,14.76,10.67Z" />
-                                                <path class="cls-1" d="M11.42,10.26A8.76,8.76,0,1,1,8.25,17" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
+                
                         <div class="btn-wrap btn-wrap-sheet">
                             <button id="btn_sheet" class="btn btn_sheet" title="Worksheet" data-toggle="tooltip">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="-8 -7 46 46">
@@ -666,6 +533,7 @@
                         </div>
 
                     </div>
+                    <div class="repeat_btn"><button class="btn btn_info" disabled data-toggle="tooltip">Repeat</button></div>
                     <div class="copyrighttext"><span>&copy; 2022, Schoolnet India Limited</span></div>
                 </div>
             </div>

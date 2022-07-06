@@ -97,26 +97,36 @@ function handleInputChange(e) {
 }
 
 
-
-function getRandomInt (min, max) {
-    ang= Math.floor(Math.random() * (max - min + 1)) + min;
-    $(".angle_plane").text(ang);
-    $(".top_image").css("transform","rotate(-"+ang+"deg)");
-    $(".weight_image").css("transform","rotate(-"+ang+"deg)");
-    $(".surface_image").css("transform:rotate(-"+ang+"deg)","transformOrigin:top center");
-    
-    
-    update();
-    return ang;
-}
-
-
-
 $(".bigRightBtn").on("click",function(){
-  min=getRandomInt(min+1,max);
-  console.log(min);
+  ang= parseInt($(".content_div .angle_plane").text())+5;
+  if(ang<45){$(".content_div .angle_plane").text(ang);}
+  else{$(".content_div .angle_plane").text(44);}
+
+  $(".rotatingDiv").css("transform","rotate(-"+ang+"deg)");
+  $(".rotatingDiv").css("left","-168px");
+  $(".rotatingDiv").css("top","-231px");
+ 
+  update();
 
 })
+$(".smallRightBtn").on("click",function(){
+  ang= parseInt($(".content_div .angle_plane").text())+1;
+  if(ang<45){$(".content_div .angle_plane").text(ang);}
+  else{$(".content_div .angle_plane").text(44);}
+})
+$(".smallLeftBtn").on("click",function(){
+
+  ang= parseInt($(".content_div .angle_plane").text())-1;
+  if(ang>0){$(".content_div .angle_plane").text(ang);}
+  else{$(".content_div .angle_plane").text(0);}
+})
+$(".bigLeftBtn").on("click",function(){
+  ang= parseInt($(".content_div .angle_plane").text())-5;
+  if(ang>0)
+  $(".content_div .angle_plane").text(ang);
+  else $(".content_div .angle_plane").text(0);
+})
+
 $(".glass_btn").on("click",function(){
   staFriC = 0.2;
     dynFri = 0.2;
@@ -182,7 +192,15 @@ function update(){
     $(".accleration").text(String(acc).substring(0, 5));
 
 }
-
+$(document).on("click", ".repeat_btn button", function (event) {
+  OnRepeatButton();
+});
+function  OnRepeatButton(){
+  $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'});  $(".sliding_force").text("0");
+  $(".accleration").text("0");
+  $(".fric_force").text("686.7");
+  $(".angle_plane").text("0");
+}
 
 
 

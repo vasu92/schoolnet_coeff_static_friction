@@ -7,11 +7,7 @@
 .container-so.main .exp_footer .footer {
     max-width: 1024px;
     width: 100%;
-    margin: 0 auto;
     background-color: var(--theme-pri-color);
-    display: flex;
-    text-align: center;
-    justify-content: center;
     outline: 1px solid var(--theme-popup-border);
 }
 .container-so.main .exp_header .copyrighttext {
@@ -829,9 +825,9 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     width: 550px;
 }
 .planeImageDiv img.scale_image{
-    top: 121px;
-    z-index:2;
-    width: 63px;
+    top: 148px;
+    z-index: 2;
+    width: 45px;
 }
 .planeImageDiv img.surface_image{
     top: 153px;
@@ -917,6 +913,13 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 }
 .planeImageDiv{
     position:absolute;
+    width:100%;
+}
+.inside_wrapper{
+    position:relative;
+    width: 54%;
+    min-height: 226px;
+    margin: 0 auto;
 }
 .bottom_content{
     margin-bottom:15px;
@@ -925,7 +928,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     background: #ffffff;
     border: 1px solid #ccc;
     border-radius: 3px;
-    min-width: 165px;
+    min-width: 160px;
     display: inline-block;
     padding-left: 5px;
 }
@@ -933,7 +936,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     margin-top:10px;
 }
 .content_wrapper{
-    width: 54%;
+    width: 100%;
     margin: 0 auto;
     min-height: 70%;
 }
@@ -941,6 +944,53 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     width:auto;
     background:none;
     border:none
+}
+.rotatingDiv{
+    
+    position: relative;
+    height: 186px;
+
+}
+.bottom_boxes span{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    /* padding: 5px; */
+    margin: 0 5px;
+}
+.bottom_boxes{
+    width:72%;
+    margin:0 auto;
+}
+.bottom_boxes span.glass_box{
+    background-color:grey;
+}
+.bottom_boxes span.green_box{
+    background-color:green;
+}
+.bottom_boxes span.wood_box{
+    background-color:orange;
+}
+.padding-right-0{
+    padding-right:0;
+}
+.bottom_content b{
+    font-family: 'Montserrat-SemiBold';
+}
+.repeat_btn button{
+    position: absolute;
+    left: 50%;
+    border: 1px solid #fff;
+    width: 81px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 40px;
+    margin: 5px 0;
+    color:#ffffff;
+}
+.repeat_btn button:hover{
+    color:#ffffff;
 }
 
 @media only screen and (min-width: 731px)
