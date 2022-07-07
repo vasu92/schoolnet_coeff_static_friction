@@ -34,8 +34,8 @@ var ScreenSplitter = (function () {
                     this.VerticalSplit();
                 }
                 else{
-                    $("#split-main").addClass("h-split-main");
-                    this.HorizontalSplit();
+                    $("#split-main").addClass("v-split-main");
+                    this.VerticalSplit();
                 }
             }
             else{
@@ -44,14 +44,14 @@ var ScreenSplitter = (function () {
                     this.VerticalSplit();
                 }
                 else {
-                    $("#split-main").addClass("h-split-main");
-                    this.HorizontalSplit();
+                    $("#split-main").addClass("v-split-main");
+                    this.VerticalSplit();
                 }
             }
             //NM: Specific to SpringOscillation.
-            var sprcontht = $(".spingContainer").height();
+            //var sprcontht = $(".spingContainer").height();
             //$(".spingContainer").css({"height":sprcontht + "px"})
-            $(".springCanvas").css({"height":sprcontht + "px"})
+            //$(".springCanvas").css({"height":sprcontht + "px"})
         },
         HorizontalSplit: function () {
             $(".gutter").remove();
@@ -75,7 +75,8 @@ var ScreenSplitter = (function () {
             $("#split-0").removeAttr("style");
             $("#split-1").removeAttr("style");
             split_instance = Split(['#split-0', '#split-1'], {
-                sizes: [50, 50],
+                minSize: 30,
+                sizes: [74, 26],
                 direction: 'vertical',
                 gutterSize: 1,
                 onDrag: function (sizes) {

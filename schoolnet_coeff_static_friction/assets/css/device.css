@@ -70,10 +70,6 @@ img.weightImage {
     width: auto;
 }
 
-/**/
-.center-screen #split-0, .center-screen #split-1 {
-    float: left;
-}
 
 @media only screen and (min-width: 321px) {
     .container-so.main .exp_header .header h1 .sub-title {
@@ -243,13 +239,6 @@ img.weightImage {
     .btn-theme-wrap {
         z-index: 11;
     }
-
-    .wrapper[device="mobile"] #split-0, .wrapper[device="mobile"] #split-1 {
-        height: 100% !important;
-        max-height: 100%;
-        float: left;
-    }
-
     .col-sm-12 {
         width: auto;
     }
@@ -296,22 +285,12 @@ img.weightImage {
         top: 0px;
     }
 
-    .center-screen #split-0, .center-screen #split-1 {
-        min-height: 100px;
-        height: 100% !important;
-        max-height: 100%;
-        float: left;
-    }
+    
 
 }
 
 @media only screen and (orientation:landscape) and  (min-width: 960px) {
-    #split-0, #split-1 {
-        min-height: 100px;
-        height: 100% !important;
-        max-height: 100%;
-        float: left;
-    }
+   
 
     .weightDispText {
         left: 20px;

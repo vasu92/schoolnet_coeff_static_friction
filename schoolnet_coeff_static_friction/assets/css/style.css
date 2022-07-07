@@ -153,8 +153,8 @@ div.footer-menu-container div.btn-wrap button:focus, div.btn-theme-wrap .btn_the
 }
 .mobileview .sliderWrapper {
     float: left;
-    padding-top: 4px;
-    padding-bottom: 0px;
+    /*padding-top: 4px;
+    padding-bottom: 0px;*/
     /*width: 100%;*/
 }
 .mobileview.cust-popup.settings .popupcontent{
@@ -372,8 +372,8 @@ div.closepopup {
 /*Settings Panel*/
 .sliderWrapper {
     float: left;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    /*padding-top: 8px;
+    padding-bottom: 8px;*/
     /*width: 100%;*/
 }
 
@@ -801,7 +801,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 }
 
 #split-0, #split-1{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .settingsCol, .calculationsCol {
     overflow: hidden;
@@ -813,7 +813,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 }
 
 /*Incline plane */
-.planeImageDiv img{
+.planeImageDiv .inside_wrapper img{
     position: absolute;
     cursor: pointer;
 }
@@ -823,23 +823,24 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 }
 .planeImageDiv img.top_image{
     top: 151px;
-    width: 530px;
+    width: 470px;
 }
 .planeImageDiv img.scale_image{
-    top: 148px;
+    top: 155px;
     z-index: 2;
     width: 45px;
 }
 .planeImageDiv .surface_image{
     top: 155px;
     z-index: 1;
-    width: 462px;
-    left: 43px;
+    width: 425px;
+    left: 30px;
     position: absolute;
 }
-.planeImageDiv img.weight_image{    top: 129px;
+.planeImageDiv img.weight_image{    
+    top: 129px;
     z-index: 1;
-    width: 84px;
+    width: 76px;
     left: 252px;
 }
 /* .content_div{
@@ -917,28 +918,34 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     top: -12px;
     position: absolute;
 }
+/*
 .planeImageDiv{
     position:absolute;
     width:100%;
     margin-top: 65px;
-}
+}*/
+
 .inside_wrapper{
     position:relative;
-    width: 54%;
+    width: 530px;
     min-height: 226px;
     margin: 0 auto;
+    margin-top: 68px;
+}
+#split-1{
+    background-color: var(--theme-popup-background);
 }
 .bottom_content{
     width: 100%;
     background-color: var(--theme-popup-background);
     overflow: auto;
     max-height: 100%;
-    position: absolute;
-    bottom: 0px;
-    border-top: 1px solid var(--theme-popup-border);
+    /*position: absolute;
+    bottom: 0px;*/
+    /*border-top: 1px solid var(--theme-popup-border);*/
     z-index: 25;
-    outline: 1px solid var(--theme-popup-border);
-    padding-bottom:15px;
+    /*outline: 1px solid var(--theme-popup-border);*/
+    padding-bottom:10px;
     margin:0;
 }
 .bottom_content .input_box{
@@ -955,7 +962,8 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 .content_wrapper{
     width: 100%;
     margin: 0 auto;
-    min-height: 70%;
+    height: 100%;
+    overflow: auto;
 }
 .spancalculate.angle_plane{
     width:auto;
@@ -1013,19 +1021,25 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 .surface_div{
     background: #ffffff;
     padding: 5px 10px;
-    min-width: 284px;
+    min-width: 260px;
     border-radius: 10px;
     border: 1px solid #ccc;
     height: 80px;
+    width: 260px;
 }
 .surface_div button{
-    padding-right: 60px;
+    /*padding-right: 60px;*/
+    padding: 0;
+    width: 70px;
 }
 .surface_div button:last-child{
     padding-right:0px;
  }
  .content_div{
     margin:0 20px;
+ }
+ .content_div .surface_div,  .content_div .AngleofPlane_div,  .content_div .sliderMassWrapper{
+    margin-bottom: 10px;
  }
  .content_div p{
     margin-bottom:0;

@@ -50,6 +50,11 @@ var ActivityShell = (function () {
       $(".container-so.main").show();
       this.AdjustContainerHeight();
       GuidedTour.Init();
+      ScreenSplitter.InitSplitter();
+      /* Scale Spring to fit */
+      ScreenSplitter.ScaleToFit($("#split-0"));
+      /* Scale Graph to fit */
+      ScreenSplitter.ScaleToFit($("#split-1"));
     },
     AdjustContainerHeight: function () {
       $(".wrapper").css({
@@ -91,8 +96,6 @@ var ActivityShell = (function () {
         $(".exp_body_content").css({ "height": (mainHt - (headerHt + footerHt)) })
         $(".exp_body_content").css({ "padding-bottom": settingPanelHt })
       }
-      
-
     },
     AdjustSmallTablet: function(){
       $(".wrapper").removeClass("small-height-landscape").removeClass("extra-small-height-landscape")
@@ -135,7 +138,7 @@ var ActivityShell = (function () {
     AdjustSplitPanelsOnClosePopup: function ($popup) {
       var deviceType = ActivityShell.DeviceType();
       if (deviceType != "mobile") {
-        $("#split-main").css({ "width": $(".wrapper").width() })
+        $("#split-main").css({ "width": "100%" })
       }
     },
     AdjustSplitPanelsOnOpenCustomPopup: function () {
