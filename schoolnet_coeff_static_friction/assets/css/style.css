@@ -425,6 +425,9 @@ div.closepopup {
     padding-bottom: 3px;
     /* text-align: center; */
 }
+.content_div .slider-label{
+    text-align: center;
+}
 
 .inputContainer .input_box {
     min-width: 68px;
@@ -555,7 +558,7 @@ input[type="range"]::-ms-track {
 
 .procInnerSliderWrapper {
     width: 170px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 
 .procInnerSliderWrapper .inputContainer .input_box {
@@ -859,7 +862,10 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     right: 25px;
     /* position: fixed; */
     bottom: 55px;
-    margin-right:5px;
+    margin-right:8px;
+}
+.popup_btn.smallRightBtn{
+    margin-left:5px;
 }
 .triangle_right {
     position: relative;
@@ -1038,15 +1044,33 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
  .content_div{
     margin:0 20px;
  }
- .content_div .surface_div,  .content_div .AngleofPlane_div,  .content_div .sliderMassWrapper{
-    margin-bottom: 10px;
+ .AngleofPlane_div{
+    text-align: center;
  }
- .content_div p{
+ .content_div .surface_div{
+    margin-bottom: 10px;
+    margin:0 auto;
+
+
+ }
+ .content_div .AngleofPlane_div{
+    width:280px;
+    margin-bottom: 10px;
+    margin:0 auto;
+
+ }
+ .content_div .sliderMassWrapper{
+    width:280px;
+    margin-bottom: 10px;
+    margin:0 auto;
+    float:none;
+ }
+ .surface_div p{
     margin-bottom:0;
     font-family:'Montserrat-SemiBold';
  }
  .content_div .col-md-4{
-    width:325px;
+    min-width:300px;
  }
  .btn-check:focus + .btn, .btn:focus{
     box-shadow:none
@@ -1057,6 +1081,68 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+.repeat_btn .btn_info:active{
+    background-color:transparent;
+}
+.procInnerSliderWrapper .surface_div{
+    width: 173px;
+    min-width:186px;
+}
+.procInnerSliderWrapper .surface_div button img,.procInnerSliderWrapper .surface_div button{
+    width:50px;
+}
+.procBox .angle_div{
+    width:40px;
+}
+.procInnerSliderWrapper .slider-label{
+    margin-bottom: 25px;
+    text-align: center;
+}
+.procInnerSliderWrapper .popup_btn.smallRightBtn{
+    margin-left:0;
+}
+.procBox .popup_btn{
+    margin-right:0;
+}
+.f_div{
+    float:left;
+}
+.s_div{
+    float: left;
+    margin-left: 85px;
+}
+.procBox .btn-wrap{
+    text-align: center;
+}
+.procBox .btn_calculations svg .cls-1, .btn_calculations svg .cls-2, .btn_calculations svg .cls-3
+{
+    stroke:var(--theme-pri-color);
+}
+.procBox .btn_calculations{
+    background:#ffffff;
+}
+.procBox .sliderWrapper .sliderInnerWrapper{
+    width:100px;
+}
+.procBox .slider-label{
+    text-align: center;
+}
+.procBox .procInnerSliderWrapper{
+    margin:0 auto;
+}
+/* .procSliderWrapper .sliderInnerWrapper{
+    width:90px;
+    float:left;
+}
+.procInnerSliderWrapper .inputContainer .input_box{
+    width:45px;
+    min-width:45px;
+    padding-left:0;
+    margin-top:-15px;
+}
+.procInnerSliderWrapper .inputContainer .unit{
+    margin-top:-15px;
+} */
 
 @keyframes slide {
   from { left: 252px; }
@@ -1065,6 +1151,67 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     transform: translateX(-100%);
     background: blue;
   }
+}
+@media only screen and (max-width: 900px){
+    .bottom_content .input_box {
+        min-width: 120px;
+
+}
+}
+@media only screen and (max-width: 500px)
+{
+    .bottom_content .input_box {
+        min-width: 90px;
+
+}
+.s_div{
+    margin-left: 50px;
+}
+.content_div .col-md-4{
+    margin-top:20px;
+}
+.content_div .col-md-4 .surface_div{
+    margin-top:10px;
+}
+.inside_wrapper{
+    width:290px;
+}
+.planeImageDiv img.bottom_image{
+    width:250px;
+}
+.planeImageDiv img.top_image {
+    top: 157px;
+    width: 310px;
+}
+.planeImageDiv .surface_image {
+    top: 159px;
+    width: 256px;
+}
+.planeImageDiv img.weight_image {
+    top: 142px;
+    width: 50px;
+    left: 192px;
+}
+.planeImageDiv img.scale_image {
+    top: 157px;
+    width: 30px;
+}
+.inside_wrapper{
+    margin-top:80px;
+}
+.repeat_btn button {
+    right: 10px;
+    left:auto;
+}
+.procBox .sliderWrapper .sliderInnerWrapper{
+    width:180px;
+}
+.procBox .slider-label{
+    text-align: center;
+}
+.procBox .procInnerSliderWrapper{
+    margin:0 auto;
+}
 }
 
 @media only screen and (min-width: 731px)

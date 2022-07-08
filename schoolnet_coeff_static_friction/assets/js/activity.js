@@ -53,31 +53,56 @@ $(".bigRightBtn").on("click",function(){
     ang=40;
     $(".content_div .angle_plane").text(ang);}
 
-  $(".rotatingDiv").css({'transform':'rotate(-'+ang+'deg)', 'transform-origin': '0'});
-  if(ang>0 && ang<=10 ){
-    $(".rotatingDiv").css({'left':'-12px'});
-  }
-  else if(ang>10 && ang<=20){
-    $(".rotatingDiv").css({'left':'-22px', 'top':'5px'});
-  }
-  else if(ang>20 && ang<=30){
-    $(".rotatingDiv").css({'left':'-35px', 'top':'12px'});
-  }
-  else if(ang>30 && ang<=40){
-    $(".rotatingDiv").css({'left':'-48px', 'top':'21px'});
-
-  }
-  else{
-    $(".rotatingDiv").css({'left':'-59px', 'top':'34px'});
-  }
+    rotatePlane();
  
   update();
 
 })
+
+function rotatePlane(){
+  $(".rotatingDiv").css({'transform':'rotate(-'+ang+'deg)', 'transform-origin': '0'});
+  if(ang>0 && ang<=5 ){
+    $(".rotatingDiv").css({'left':'-4px','top':'2px'});
+  }
+  else if(ang>5 && ang<=10 ){
+    $(".rotatingDiv").css({'left':'-10px','top':'3px'});
+  }
+  else if(ang>10 && ang<=15){
+    $(".rotatingDiv").css({'left':'-16px', 'top':'5px'});
+  }
+  else if(ang>15 && ang<=20){
+    $(".rotatingDiv").css({'left':'-22px', 'top':'7px'});
+  }
+  else if(ang>20 && ang<=25){
+    $(".rotatingDiv").css({'left':'-29px', 'top':'10px'});
+  }
+  else if(ang>25 && ang<=30){
+    $(".rotatingDiv").css({'left':'-35px', 'top':'14px'});
+  }
+  else if(ang>30 && ang<=35){
+    $(".rotatingDiv").css({'left':'-44px', 'top':'19px'});
+
+  }
+  else if(ang>35 && ang<=40){
+    $(".rotatingDiv").css({'left':'-50px', 'top':'24px'});
+
+  }
+  else if(ang>40 && ang<=44){
+    $(".rotatingDiv").css({'left':'-59px', 'top':'30px'});
+  }
+  else{
+    $(".rotatingDiv").css({'left':'0px', 'top':'0px'});
+  }
+}
+
+
 $(".smallRightBtn").on("click",function(){
   ang= parseInt($(".content_div .angle_plane").text())+1;
   if(ang<44){$(".content_div .angle_plane").text(ang);}
-  else{$(".content_div .angle_plane").text(44);}
+  else{
+    ang=44;
+    $(".content_div .angle_plane").text(44);}
+  rotatePlane();
   update();
 })
 $(".smallLeftBtn").on("click",function(){
@@ -85,6 +110,7 @@ $(".smallLeftBtn").on("click",function(){
   ang= parseInt($(".content_div .angle_plane").text())-1;
   if(ang>0){$(".content_div .angle_plane").text(ang);}
   else{$(".content_div .angle_plane").text(0);}
+  rotatePlane();
   update();
 })
 $(".bigLeftBtn").on("click",function(){
@@ -92,10 +118,11 @@ $(".bigLeftBtn").on("click",function(){
   if(ang>0)
   $(".content_div .angle_plane").text(ang);
   else $(".content_div .angle_plane").text(0);
+  rotatePlane();
   update();
 })
 
-$(".glass_btn").on("click",function(){
+$(".content_div .surface_div .glass_btn").on("click",function(){
   staFriC = 0.2;
     dynFri = 0.2;
     $(".rotatingDiv img.surface_image").attr("src","assets/images/grey_surface.svg")
@@ -103,7 +130,7 @@ $(".glass_btn").on("click",function(){
     update();
 
 })
-$(".green_btn").on("click",function(){
+$(".content_div .surface_div .green_btn").on("click",function(){
   staFriC = 0.4;
     dynFri = 0.4;
     $(".rotatingDiv img.surface_image").attr("src","assets/images/green_surface.svg")
@@ -111,7 +138,7 @@ $(".green_btn").on("click",function(){
     update();
 
 })
-$(".wood_btn").on("click",function(){
+$(".content_div .surface_div .wood_btn").on("click",function(){
   staFriC = 0.7;
     dynFri = 0.7;
     $(".rotatingDiv img.surface_image").attr("src","assets/images/brown_surface.svg")
@@ -147,7 +174,7 @@ function update(){
     if(ang > 21){
       $(".repeat_btn button").removeAttr("disabled");
       $(".rotatingDiv").addClass("moveObj");
-      $(".rotatingDiv.moveObj .weight_image").css({'animation': '3s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
+      $(".rotatingDiv.moveObj .weight_image").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
     }
 
 }
@@ -155,7 +182,7 @@ $(document).on("click", ".repeat_btn button", function (event) {
   OnRepeatButton();
 });
 function  OnRepeatButton(){
-  $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'}); 
+  // $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'}); 
   $(".content_div .angle_plane").text("0");
   $(".rotatingDiv").css({'transform':'rotate(0deg)','left':'0','top':'0'});
   $(".rotatingDiv.moveObj .weight_image").css({'animation-fill-mode': 'backwards'});

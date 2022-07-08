@@ -15,17 +15,38 @@ const g_tour_steps = [
         sourceElmIdQS: "#btn_calculations",
         informationText: `Calculations - Evaluates the formulas for selected values.`,
     },
-    {
-        sourceElmIdQS: "#btn_stop",
-        informationText: `Stop - Stops the experiment.`,
-    },
-    {
-        sourceElmIdQS: "#btn_reset",
-        informationText: `Reset - Reset experiment values and state.`,
-    },
+    // {
+    //     sourceElmIdQS: "#btn_stop",
+    //     informationText: `Stop - Stops the experiment.`,
+    // },
+    // {
+    //     sourceElmIdQS: "#repeat_btn",
+    //     informationText: `Repeat - Repeat the experiment values and state.`,
+    // },
     {
         sourceElmIdQS: "#btn_sheet",
         informationText: `Sheet - Download the experiment sheet to input observations.`,
+    },
+   
+    {
+        sourceElmIdQS: ".bigLeftBtn",
+        informationText: `Bigger button - Decrease the angle by 5`,
+
+    },
+    {
+        sourceElmIdQS: ".smallLeftBtn",
+        informationText: `Smaller button - Decrease the angle by 1`,
+
+    },
+    {
+        sourceElmIdQS: ".smallRightBtn",
+        informationText: `Smaller button - Increase the angle by 1`,
+
+    },
+    {
+        sourceElmIdQS: ".bigRightBtn",
+        informationText: `Bigger Button - Increase the angle by 5`,
+
     },
     {
         sourceElmIdQS: "#btn_themes",
