@@ -164,18 +164,22 @@ function update(){
     $(".norm_force").text(String(normF).substring(0, 8));
     $(".spancalculate.angle_plane").text(ang);
     acc = g * (Ma * (dynFri * Math.cos(angR) - Math.sin(angR))) / (Ma);
-    if(ang<22){
+    if(acc>0){
       acc=0;
       $(".accleration").text(0);
     }
     else{
     $(".accleration").text(String(acc).substring(0, 5));
+    $(".repeat_btn button").removeAttr("disabled");
+    $(".rotatingDiv").addClass("moveObj");
+    $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
     }
-    if(ang > 21){
-      $(".repeat_btn button").removeAttr("disabled");
-      $(".rotatingDiv").addClass("moveObj");
-      $(".rotatingDiv.moveObj .weight_image").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
-    }
+    // if(acc){
+    //   $(".repeat_btn button").removeAttr("disabled");
+    //   $(".rotatingDiv").addClass("moveObj");
+    //   $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
+
+    // }
 
 }
 $(document).on("click", ".repeat_btn button", function (event) {
@@ -185,7 +189,7 @@ function  OnRepeatButton(){
   // $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'}); 
   $(".content_div .angle_plane").text("0");
   $(".rotatingDiv").css({'transform':'rotate(0deg)','left':'0','top':'0'});
-  $(".rotatingDiv.moveObj .weight_image").css({'animation-fill-mode': 'backwards'});
+  $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation-fill-mode': 'backwards'});
   update();
  
 }
