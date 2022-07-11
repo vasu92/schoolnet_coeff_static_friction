@@ -45,9 +45,17 @@ function handleInputChange(e) {
 
 
 $(".bigRightBtn").on("click",function(){
-  ang= parseInt($(".content_div .angle_plane").text())+5;
-  if(ang<40){
+  ang= parseInt($(".content_div .angle_plane").text());
+  if(ang<39){
+    ang=ang+5;
     $(".content_div .angle_plane").text(ang, "<sup>0</sup>");}
+  else if(ang>40 && ang<45){
+    // ang=44;
+    $(".content_div .angle_plane").text(ang, "<sup>0</sup>");
+
+  }
+  
+  
   else{
 
     ang=40;
@@ -172,14 +180,9 @@ function update(){
     $(".accleration").text(String(acc).substring(0, 5));
     $(".repeat_btn button").removeAttr("disabled");
     $(".rotatingDiv").addClass("moveObj");
-    $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
+    $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '60'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
     }
-    // if(acc){
-    //   $(".repeat_btn button").removeAttr("disabled");
-    //   $(".rotatingDiv").addClass("moveObj");
-    //   $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
-
-    // }
+ 
 
 }
 $(document).on("click", ".repeat_btn button", function (event) {
@@ -189,7 +192,7 @@ function  OnRepeatButton(){
   // $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'}); 
   $(".content_div .angle_plane").text("0");
   $(".rotatingDiv").css({'transform':'rotate(0deg)','left':'0','top':'0'});
-  $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation-fill-mode': 'backwards'});
+  $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation-fill-mode': 'backwards', 'animation-duration':'0s','animation-direction': 'reverse'});
   update();
  
 }

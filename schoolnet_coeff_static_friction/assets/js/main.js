@@ -87,7 +87,7 @@ var ActivityShell = (function () {
             $(".cust-popup.settings .settingsCol").hide();
             $(".cust-popup.settings .calculationsCol").hide();
           }
-          $(".popup.calculations").remove();
+          // $(".popup.calculations").remove();
           $(".popup.worksheet").addClass("cust-popup").removeClass("popup");
           $(".popup.procedure").addClass("cust-popup").removeClass("popup");
           $(".btn.btn_sheet").addClass("cust");
@@ -192,7 +192,7 @@ var ActivityShell = (function () {
         if (deviceType == "mobile") {
           if ($(".cust-popup").is(":visible")) {
             $(".cust-popup").hide();
-            $(".calculationsCol").hide();
+            // $(".calculationsCol").hide();
             $(".settingsCol").hide();
             ActivityShell.AdjustSplitPanelsOnCloseCustomPopup()
           }
@@ -422,15 +422,11 @@ $(document).on("click", ".btn-close-popup", function (event) {
 
 $(document).on("click", "#btn_calculations", function (event) {
   var deviceType = ActivityShell.DeviceType();
-  if (deviceType != "mobile") {
+  
+ 
     ActivityShell.TogglePopup($(".popup.calculations"), $(this));
-  }
-  else {
-    //NM: $(".cust-popup.settings") is parent popup as for mobile 
-    //Calculations popup is moved into settings popup.
-    ActivityShell.ToggleCustomPopup($(".cust-popup.settings"), "calculations", $(this));
-  }
-});
+  });
+
 
 $(document).on("click", "#btn_settings", function (event) {
   var deviceType = ActivityShell.DeviceType();
