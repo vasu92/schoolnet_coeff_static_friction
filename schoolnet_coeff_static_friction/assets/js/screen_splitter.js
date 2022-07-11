@@ -49,8 +49,10 @@ var ScreenSplitter = (function () {
                 }
             }
             //NM: Specific to SpringOscillation.
-            //var sprcontht = $(".spingContainer").height();
-            //$(".spingContainer").css({"height":sprcontht + "px"})
+            var contht = $("#split-0").height();
+            $("#split-0 .content_wrapper").css({"height":contht + "px"})
+            contht = $("#split-1 .content-container").height();
+            $("#split-1 .content-container").css({"height":contht + "px"})
             //$(".springCanvas").css({"height":sprcontht + "px"})
         },
         HorizontalSplit: function () {
@@ -89,6 +91,7 @@ var ScreenSplitter = (function () {
             $(".gutter").append(verticalHandle)
         },
         ScaleToFit: function ($wrapper,$element, deltaWidth, deltaHeight) {
+            //debugger;
             if($element==null || $element == undefined){
                 $element = $wrapper.find(".content-container")
             }

@@ -300,14 +300,14 @@ var ActivityShell = (function () {
     },
     OnOrientationChange: function () {
       this.AdjustContainerHeight();
-      // ScreenSplitter.InitSplitter();
+      ScreenSplitter.InitSplitter();
       if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"))
       }
       /* Scale Spring to fit */
-      //ScreenSplitter.ScaleToFit($("#split-0"))
+      ScreenSplitter.ScaleToFit($("#split-0"))
       /* Scale Graph to fit */
-      // ScreenSplitter.ScaleToFit($("#split-1"))
+      ScreenSplitter.ScaleToFit($("#split-1"))
       this.AdjustSmallTablet();
     },
     IsIOSDevice: function () {
@@ -323,14 +323,14 @@ var ActivityShell = (function () {
       var deviceType = this.DeviceType();
       //if(deviceType == "desktop"){
       this.AdjustContainerHeight();
-      // ScreenSplitter.InitSplitter(true);
+      ScreenSplitter.InitSplitter(true);
       if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"))
       }
       /* Scale Spring to fit */
-      //ScreenSplitter.ScaleToFit($("#split-0"))
+      ScreenSplitter.ScaleToFit($("#split-0"))
       /* Scale Graph to fit */
-      // ScreenSplitter.ScaleToFit($("#split-1"))
+      ScreenSplitter.ScaleToFit($("#split-1"))
       //}
       GuidedTour.OnResize();
     },
