@@ -1181,6 +1181,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
     left: 180px;
     transform: translateX(-100%);
   }
+  
 }
 @media only screen and (max-width: 900px){
     .bottom_content .input_box {
@@ -1239,6 +1240,13 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
         width:180px;
     }
 
+  }
+  @media only screen  and (min-device-width: 560px) 
+  and (max-device-width: 680px) 
+  {
+    .col-sm-12 {
+    width: 100% !important;
+  }
   }
 @media only screen and (max-width: 500px)
 {

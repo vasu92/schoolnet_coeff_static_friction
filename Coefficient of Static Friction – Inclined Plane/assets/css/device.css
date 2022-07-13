@@ -64,6 +64,9 @@ img.weightImage {
 .wrapper[device="mobile"] .graphContainer{
     margin-left: -55px;
 }
+.wrapper[device="mobile"] .popup.calculations{
+    top:0;
+}
 
 /*END BOB Style*/
 .wrapper[device="desktop"] .settingsCol .col-lg-3.col-md-3.col-sm-12 {

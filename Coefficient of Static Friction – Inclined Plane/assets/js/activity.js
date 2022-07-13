@@ -69,34 +69,64 @@ $(".bigRightBtn").on("click",function(){
 
 function rotatePlane(){
   $(".rotatingDiv").css({'transform':'rotate(-'+ang+'deg)', 'transform-origin': '0'});
-  if(ang>0 && ang<=5 ){
-    $(".rotatingDiv").css({'left':'-4px','top':'2px'});
+  
+  if(ang>0 && ang<5 ){
+    $(".rotatingDiv").css({'left':'-2px','top':'2px'});
   }
-  else if(ang>5 && ang<=10 ){
+  else if(ang==5){
+    $(".rotatingDiv").css({'left':'-6px','top':'3px'});
+  }
+  else if(ang>5 && ang<10 ){
+    $(".rotatingDiv").css({'left':'-8px','top':'3px'});
+  }
+  else if(ang==10){
     $(".rotatingDiv").css({'left':'-10px','top':'3px'});
   }
-  else if(ang>10 && ang<=15){
+  else if(ang>10 && ang<15){
     $(".rotatingDiv").css({'left':'-16px', 'top':'5px'});
   }
-  else if(ang>15 && ang<=20){
-    $(".rotatingDiv").css({'left':'-22px', 'top':'7px'});
+  else if(ang==15){
+    $(".rotatingDiv").css({'left':'-19px', 'top':'5px'});
   }
-  else if(ang>20 && ang<=25){
-    $(".rotatingDiv").css({'left':'-29px', 'top':'10px'});
+  else if(ang>15 && ang<20){
+    $(".rotatingDiv").css({'left':'-23px', 'top':'7px'});
   }
-  else if(ang>25 && ang<=30){
-    $(".rotatingDiv").css({'left':'-35px', 'top':'14px'});
+  else if(ang==20){
+    $(".rotatingDiv").css({'left':'-26px', 'top':'7px'});
   }
-  else if(ang>30 && ang<=35){
-    $(".rotatingDiv").css({'left':'-44px', 'top':'19px'});
+  else if(ang>20 && ang<25){
+    $(".rotatingDiv").css({'left':'-29px', 'top':'9px'});
+  }
+  else if(ang==25){
+    $(".rotatingDiv").css({'left':'-30px', 'top':'9px'});
+  }
+  else if(ang>25 && ang<30){
+    $(".rotatingDiv").css({'left':'-35px', 'top':'12px'});
+  }
+  else if(ang==30){
+    $(".rotatingDiv").css({'left':'-39px', 'top':'14px'});
+  }
+  else if(ang>30 && ang<35){
+    $(".rotatingDiv").css({'left':'-42px', 'top':'16px'});
 
   }
-  else if(ang>35 && ang<=40){
-    $(".rotatingDiv").css({'left':'-50px', 'top':'24px'});
+  else if(ang==35){
+    $(".rotatingDiv").css({'left':'-45px', 'top':'18px'});
 
   }
-  else if(ang>40 && ang<=44){
-    $(".rotatingDiv").css({'left':'-59px', 'top':'30px'});
+  else if(ang>35 && ang<40){
+    $(".rotatingDiv").css({'left':'-48px', 'top':'20px'});
+
+  }
+  else if(ang==40){
+    $(".rotatingDiv").css({'left':'-52px', 'top':'23px'});
+
+  }
+  else if(ang>40 && ang<44){
+    $(".rotatingDiv").css({'left':'-55px', 'top':'25px'});
+  }
+  else if(ang==44){
+    $(".rotatingDiv").css({'left':'-60px', 'top':'29px'});
   }
   else{
     $(".rotatingDiv").css({'left':'0px', 'top':'0px'});
@@ -180,7 +210,7 @@ function update(){
     $(".accleration").text(String(acc).substring(0, 5));
     $(".repeat_btn button").removeAttr("disabled");
     $(".rotatingDiv").addClass("moveObj");
-    $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '60'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
+    $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '50'-+ang+'s linear 0s slide','animation-iteration-count': '1','animation-fill-mode': 'forwards'});
     }
  
 
@@ -192,7 +222,14 @@ function  OnRepeatButton(){
   // $(".repeat_btn button").css({'background':'#ffffff','color':'var(--theme-pri-color)','border':'1px solid var(--theme-pri-color)'}); 
   $(".content_div .angle_plane").text("0");
   $(".rotatingDiv").css({'transform':'rotate(0deg)','left':'0','top':'0'});
-  $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation-fill-mode': 'backwards', 'animation-duration':'0s','animation-direction': 'reverse'});
+  // $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation-fill-mode': 'backwards'});
+
+  $(".rotatingDiv.moveObj .weight_image,.rotatingDiv.moveObj .weight_A").css({'animation': '60'-+ang+'s linear 0s','animation-fill-mode': 'backwards', 'animation-duration':'0s','animation-direction': 'reverse'});
+  $(".rotatingDiv").removeClass("moveObj");
+  
+  
+
+
   update();
  
 }
