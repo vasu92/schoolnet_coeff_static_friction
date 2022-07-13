@@ -29,22 +29,22 @@ const g_tour_steps = [
     },
    
     {
-        sourceElmIdQS: ".bigLeftBtn",
+        sourceElmIdQS: "#btnbigLeftBtn",
         informationText: `Bigger button - Decrease the angle by 5.`,
 
     },
     {
-        sourceElmIdQS: ".smallLeftBtn",
+        sourceElmIdQS: "#btnsmallLeftBtn",
         informationText: `Smaller button - Decrease the angle by 1.`,
 
     },
     {
-        sourceElmIdQS: ".smallRightBtn",
+        sourceElmIdQS: "#btnsmallRightBtn",
         informationText: `Smaller button - Increase the angle by 1.`,
 
     },
     {
-        sourceElmIdQS: ".bigRightBtn",
+        sourceElmIdQS: "#btnbigRightBtn",
         informationText: `Bigger Button - Increase the angle by 5.`,
 
     },

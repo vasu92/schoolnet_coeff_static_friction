@@ -138,7 +138,26 @@ var ScreenSplitter = (function () {
         ResetSplit: function(){
             $(".split-scaled").removeAttr("scale").removeAttr("style").removeClass("split-scaled");
             this.InitSplitter();
-            ScreenSplitter.ScaleToFit($("#split-1"))
+            /* Scale Spring to fit */
+            ScreenSplitter.ScaleToFit($("#split-0"));
+            /* Scale Graph to fit */
+            ScreenSplitter.ScaleToFit($("#split-1"));
+        },
+        ResetSplitOnPinchZoom: function(){
+            var attr_sizes = []
+            var splitPanel1Size = $("#split-0").attr("size");
+            var splitPanel2Size = $("#split-1").attr("size");
+            if(splitPanel1Size!=undefined && splitPanel1Size !="" && splitPanel2Size !=undefined && splitPanel2Size != ""){
+                attr_sizes = [
+                    Number(splitPanel1Size),
+                    Number(splitPanel2Size)
+                ]
+                //alert(attr_sizes)
+                this.InitSplitter(attr_sizes);
+            }
+            else{
+                this.InitSplitter();
+            }
         }
     }
 })();

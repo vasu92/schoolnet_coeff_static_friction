@@ -73,6 +73,10 @@ img.weightImage {
     width: auto;
 }
 
+.smallRightBtn.gt-clone{
+    margin-left: 0px;
+}
+
 
 @media only screen and (min-width: 321px) {
     .container-so.main .exp_header .header h1 .sub-title {

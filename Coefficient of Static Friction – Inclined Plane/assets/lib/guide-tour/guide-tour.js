@@ -32,10 +32,12 @@ var GuidedTour = (function () {
             var myposition = this.getPosition($(g_tour_steps[dt_step_count].sourceElmIdQS));
             $(".gt-clone").remove();
             $(".gt-instr-box").after($(g_tour_steps[dt_step_count].sourceElmIdQS).clone().addClass("gt-clone").removeAttr("id").removeAttr("data-bs-toggle").removeAttr("data-bs-target"));
-            $(".gt-clone").css({ "left": myposition.left-1, "top": myposition.top -1 });
-
+            $(".gt-clone").css({ "left": myposition.left, "top": myposition.top });
+            var objWdt = $(".gt-clone").outerWidth()
+            var objHt = $(".gt-clone").outerHeight()
             var horSide = "left";
             var verSide = "top";
+            $(".gt-instr-box").removeAttr("style")
             if (myposition.left < (window.innerWidth / 2)) {
                 horSide = "right";
             }
@@ -43,8 +45,13 @@ var GuidedTour = (function () {
                 verSide = "bottom";
             }
             if (horSide == "right") {
-                if ((myposition.left + 250) > window.innerWidth) {
-                    $(".gt-instr-box").css({ "left": myposition.left - ((myposition.left + 250) - window.innerWidth) - 10, "top": myposition.top });
+                if ((myposition.left + 250 + objWdt + 20) > window.innerWidth) {
+                    if(verSide == "bottom"){
+                        $(".gt-instr-box").css({ "left": myposition.left - ((myposition.left + 250 + objWdt + 20) - window.innerWidth) - 10, "top": myposition.top + objHt + 20, "margin-top": objHt});
+                    }
+                    else{
+                        $(".gt-instr-box").css({ "left": myposition.left - ((myposition.left + 250 + objWdt + 20) - window.innerWidth) - 10, "top": myposition.top });
+                    }
                 }
                 else {
                     $(".gt-instr-box").css({ "left": myposition.left, "top": myposition.top });
@@ -53,7 +60,7 @@ var GuidedTour = (function () {
             else if (horSide == "left") {
                 if ((myposition.left - 250) < 0) {
                     var marleft = myposition.left + (250 - myposition.left) + 10
-                    $(".gt-instr-box").css({ "left": + marleft + "px" })
+                    $(".gt-instr-box").css({ "left": + marleft + "px" , "top": myposition.top})
                 }
                 else {
                     $(".gt-instr-box").css({ "left": myposition.left + 30, "top": myposition.top });
