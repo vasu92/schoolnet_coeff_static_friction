@@ -102,25 +102,25 @@ function hammerItScrollableContent(elm, p_maxScale) {
         p_maxScale = 4
 
     hammertime_scroll.on('doubletap pinchstart pinch pinchend', function (ev) {
-        if (ev.type == "doubletap") {
-            console.log("111")
-            transform =
-                "translate3d(0,0,0) " +
-                "scale3d(2, 2, 1)";
-            scale = 2;
-            last_scale = 2;
-            try {
-                if (window.getComputedStyle(el, null).getPropertyValue('-webkit-transform').toString() != "matrix(1, 0, 0, 1, 0, 0)") {
-                    transform =
-                        "translate3d(" + 0 + "px," + 0 + "px, 0) " +
-                        "scale3d(1, 1, 1) ";
-                    scale = 1;
-                    last_scale = 1;
-                }
-            } catch (err) { }
-            PZApplyScaleScrollable(el, scale)
-            transform = "";
-        }
+        // if (ev.type == "doubletap") {
+        //     console.log("111")
+        //     transform =
+        //         "translate3d(0,0,0) " +
+        //         "scale3d(2, 2, 1)";
+        //     scale = 2;
+        //     last_scale = 2;
+        //     try {
+        //         if (window.getComputedStyle(el, null).getPropertyValue('-webkit-transform').toString() != "matrix(1, 0, 0, 1, 0, 0)") {
+        //             transform =
+        //                 "translate3d(" + 0 + "px," + 0 + "px, 0) " +
+        //                 "scale3d(1, 1, 1) ";
+        //             scale = 1;
+        //             last_scale = 1;
+        //         }
+        //     } catch (err) { }
+        //     PZApplyScaleScrollable(el, scale)
+        //     transform = "";
+        // }
         if (scale != 1) {
             posX = last_posX + ev.deltaX;
             posY = last_posY + ev.deltaY;
